@@ -1,0 +1,157 @@
+/* HASTA SM */
+@media (max-width: 575px) {
+	/* GLOBAL */
+		main{
+			padding-top: 70px;
+		}
+	/* HEADER */
+		header{
+			padding: 10px 0px;
+		}
+		/* logo */
+		#logo{
+			margin: 0px;
+			max-width: 50px;
+		}
+	/* PERFIL */
+		ul.lista_gustos{
+    		justify-content: space-evenly;
+			display: flex;
+    		flex-wrap: wrap;
+		}
+		ul.lista_gustos li{
+			width: 50%;
+			flex: 0 0 auto;
+		}
+
+	/* ARTISTAS */
+		 /* filtros */
+		 	#filtros_artistas_holder{
+				max-height: 1200px;
+			}
+			#aplicar_filtro{
+				margin-bottom: 20px;
+			}
+	/* ARTISTA */
+		#desc_ultimo_artista_holder.holder_artista_borde{
+			border: 0px;
+		}
+}
+
+/* HASTA MD */
+@media (max-width: 767px) {
+	/* HOME */
+		#horarios_home #button_horarios_home{
+			background: var(--turquesa);
+	    	margin-top: 40px;
+	    	margin-bottom: 40px;
+		}
+	/* PERFIL */
+		#info_perfil{
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+	/* ARTISTAS */
+		 /* filtros */
+		 	.opcion_filtro label{
+		 		text-align: center;
+			}
+
+	/* MURO Y CHAT */
+		/* tabs */
+			.tab_hidden{
+				display: none;
+			}
+			.tab{
+				padding: 10px;
+				border-radius: 10px;
+			} 
+			.tab_muro{
+				margin-right: 20px;
+			}
+			#muro .tab_chat{
+				cursor: pointer;
+				background-color: var(--turquesa);
+			}
+			#muro .tab_chat:hover,
+			#muro .tab_chat:active,
+			#muro .tab_chat:focus{
+				background-color: var(--turquesa-oscuro);
+			}
+			#chat .tab_muro{
+				cursor: pointer;
+				background-color: var(--gris-claro);
+			}
+			#chat .tab_muro:hover,
+			#chat .tab_muro:active,
+			#chat .tab_muro:focus{
+				background-color: var(--gris);
+			}
+}
+
+/* HASTA LG */
+@media (max-width: 991px) {
+	/* ARTISTAS */
+		.nombre_artista{
+			display: block;
+		}
+
+	/* FOOTER */
+		#enlace_legal{
+			text-align: center;
+		}
+		.footer_content_col{
+			margin-bottom: 40px;
+		}
+		ul#redes_sociales_footer{
+			justify-content: space-evenly;
+		}
+	/* DIRECTO */
+		#titulo_video{
+			font-size: 0.5em;
+			white-space: initial;
+		}
+		#viewers_video{
+			text-align: right;
+	    	line-height: 1;
+	    	padding: 5px;
+		}
+		#compartir_video_holder{
+			position: absolute;
+			top: 10px;
+			right: 0px;
+		}
+		#compartir_video a{
+			padding: 3px 5px;
+			border-radius: 5px;
+			border: 0px;
+			font-size: 0px;
+		}
+}
+
+/* DESDE SM */
+@media (min-width: 576px) {
+
+}
+
+/* DESDE MD */
+@media (min-width: 768px) {
+	/* MURO Y CHAT */
+		/* tabs */
+			#muro .tab_chat{
+				display: none;
+			}
+			#chat .tab_muro{
+				display: none;
+			}
+}
+
+/* DESDE LG */
+@media (min-width: 992px) {
+	/* ARTISTAS */
+		.artista{
+			width: 20% !important;
+		}
+
+}

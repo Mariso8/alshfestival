@@ -1,0 +1,1051 @@
+
+/* VARIABLES */
+:root {
+  	--negro: #000000;
+  	--blanco: #ffffff;
+  	--turquesa: #62b1bb;
+  	--turquesa-oscuro: #50949c;
+  	--rosa: #cb546e;
+  	--rosa-oscuro: #b1465d;
+  	--amarillo: #f6db79;
+  	--amarillo-oscuro: #e8cc66;
+  	--gris-oscuro: #999999;
+  	--gris: #cccccc;
+  	--gris-claro: #eeeeee;
+  	--gris-muy-claro: #f6f6f6;
+}
+
+
+/* GLOBAL */
+	*{
+		box-sizing: border-box;
+		font-family: 'Sarabun', sans-serif;
+	}
+	body{
+		font-size: 16px;
+		line-height: 1.7;
+	}
+	body.fixed{
+		overflow: hidden;
+		height: 100vh;
+	}
+	main{
+		padding: 200px 0px 80px 0px;
+		min-height: calc(100vh - 130px);
+	}
+	b{
+		font-weight: bold !important;
+	}
+
+	/* links */
+	a{
+		text-decoration: none;
+		color: var(--negro);
+	}
+	a:hover,
+	a:active,
+	a:focus{
+		color: var(--turquesa);
+	}
+	/* headers */
+	.h3{
+		font-size: 3em;
+		font-weight: bold;
+		letter-spacing: 1px;
+	}
+	.h4{
+		font-size: 2em;
+		letter-spacing: 1px;
+	}
+	.h5{
+		font-size: 1.5em;
+		letter-spacing: 1px;
+	}
+	/* titles */
+	.titulo_seccion{
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.icono_titulo_seccion_antes:before,
+	.icono_titulo_seccion_despues:after{
+		content: "";
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 36px;
+		height: 36px;
+		display: inline-block;
+    	vertical-align: bottom;
+	}
+	.icono_titulo_seccion_antes:before{
+		margin-right: 15px;
+	}
+	.icono_titulo_seccion_despues:after{
+		margin-left: 15px;
+	}
+	/* buttons */
+	.button{
+		display: inline-block;
+		padding: 15px 30px;
+		border-radius: 10px;
+		border: 0px;
+		background: var(--turquesa);
+		color: var(--blanco);
+		letter-spacing: 1px;
+		outline: none;
+	}
+	.button:hover,
+	.button:active,
+	.button:focus{
+		background: var(--turquesa-oscuro);
+		color: var(--blanco);
+	}
+	.button.button-secondary{
+		display: inline-block;
+		padding: 15px 30px;
+		border-radius: 10px;
+		border: 0px;
+		background: var(--gris);
+		color: var(--negro);
+		letter-spacing: 1px;
+		outline: none;
+	}
+	.button.button-secondary:hover{
+		background: var(--gris-oscuro);
+		color: var(--negro);
+	}
+	.button.btn-small{
+		padding: 5px 30px;
+	}
+	.button.btn-mini{
+		padding: 0px 5px;
+	}
+
+/* COMMON */
+	/* custom font */
+	.custom_font{
+		font-family: 'Baron Neue', sans-serif;
+	}
+	.custom_font_alt{
+		font-family: 'Baron Neue', sans-serif;
+		text-transform: uppercase;
+	}
+	/* lists */
+	ul.unstyled_list, ol.unstyled_list{
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+	}
+	ul.unstyled_list li, ol.unstyled_list li{
+		display: inline-block;
+		list-style: none;
+	}
+
+	/* inputs */
+	.form_input{
+		margin-bottom: 20px;
+		text-align: left;
+	}
+	.form_input label{
+		font-weight: bold;
+	}
+	input.input{
+		display: block;
+		width: 100%;
+		padding: 10px;
+		border: 0px;
+		border-radius: 5px;
+		background: var(--gris-claro);
+		outline: 0px;
+		box-shadow: none;
+	}
+
+	/* splash screen */
+	#splash_screen{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		width: 100%;
+		height: 100vh;
+		background-color: var(--blanco);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	#splash_screen.closed{
+		display: none;
+	}
+	#logo_splash{
+		display: block;
+		width: 80%;
+		max-width: 200px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	/* login modal */
+	#login_modal{
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 99;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0,0,0,0.2);
+		text-align: center;
+	}
+	#login_modal.open{
+		display: block;
+	}
+	#login_modal_popup{
+		display: block;
+		width: 80%;
+		max-width: 550px;
+		position: absolute;
+		top: 200px;
+		left: 50%;
+		transform: translate(-50%, 0%);
+
+		background: var(--blanco);
+		border-radius: 10px;
+		padding: 30px 80px;
+	}
+	#titulo_login{
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+	#enlace_login{
+		display: inline-block;
+		margin: 30px 0px;
+	}
+
+	/* login modal */
+	#cookies_modal{
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 99;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0,0,0,0.2);
+		text-align: center;
+	}
+	#cookies_modal.closed{
+		display: none;
+	}
+	#cookies_modal_holder{
+		display: block;
+		position: absolute;
+		bottom: 30px;
+		left: 50%;
+		transform: translate(-50%, 0%);
+	}
+	#cookies_modal_popup{
+		width: 90%;
+		margin: auto;
+
+		background-color: var(--negro);
+		border-radius: 10px;
+		padding: 30px 80px;
+	}
+	#cookies_desc{
+		color: var(--blanco);
+		font-weight: bold;
+	}
+	#enlace_cookies{
+		padding: 5px 60px;
+		background-color: var(--rosa);
+		color: var(--negro);
+		font-weight: bold;
+	}
+	#enlace_cookies:hover,
+	#enlace_cookies:active,
+	#enlace_cookies:focus{
+		background-color: var(--rosa-oscuro);
+	}
+	/* colores */
+	.tag_turquesa{
+		color: var(--turquesa);
+	}
+	.tag_rosa{
+		color: var(--rosa);
+	}
+	.tag_amarillo{
+		color: var(--amarillo);
+	}
+
+	a.tag_turquesa:hover, button.tag_turquesa,
+	a.tag_turquesa:active, button.tag_turquesa:active,
+	a.tag_turquesa:focus, button.tag_turquesa:focus{
+		color: var(--turquesa-oscuro);
+	}
+	a.tag_rosa:hover, button.tag_rosa,
+	a.tag_rosa:active, button.tag_rosa:active,
+	a.tag_rosa:focus, button.tag_rosa:focus{
+		color: var(--rosa-oscuro);
+	}
+	a.tag_amarillo:hover, button.tag_amarillo,
+	a.tag_amarillo:active, button.tag_amarillo:active,
+	a.tag_amarillo:focus, button.tag_amarillo:focus{
+		color: var(--amarillo-oscuro);
+	}
+
+/* HEADER */
+	header{
+		min-height: 70px;
+		padding: 30px 0px 10px 0px;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		background-color: var(--blanco);
+		z-index: 10;
+	}
+
+	/* menu */
+	ul.menu-top{
+		font-size: 0px;
+	}
+	ul.menu-top li{
+		width: 25%;
+		font-size: initial;
+		padding: 10px;
+		text-align: center;
+		font-weight: bold;
+		height: 80px;
+		line-height: 60px;
+	}
+	ul.menu-top li a{
+		vertical-align: middle;
+    	white-space: nowrap;
+	}
+	/* logo */
+	#logo{
+		width: 100%;
+		max-width: 80px;
+		display: block;
+		margin: auto;
+	}
+	/* menu mobile */
+	#menu_mobile{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background: var(--blanco);
+	}
+	#menu_open_holder{
+		text-align: right;
+	}
+	#menu_open{
+		display: inline-block;
+		width: 50px;
+		cursor: pointer;
+	}
+	#menu_mobile.closed{
+		display: none !important;
+	}	
+	#menu_close_holder{
+		text-align: right;
+	}
+	#menu_close{
+		display: inline-block;
+		width: 50px;
+		cursor: pointer;
+	}
+
+	#menu_mobile ul{
+		display: block;
+		border-top: 2px solid var(--negro);
+		border-bottom: 2px solid var(--negro);
+		padding: 10px 0px;
+	}
+	#menu_mobile ul li{
+		display: block;
+	}
+	.menu_mobile_link{
+		display: block;
+		padding: 20px;
+		text-align: center;
+		font-weight: bold;
+	}
+	.menu_mobile_link.selected{
+		color: var(--turquesa);
+	}
+
+/* FOOTER */
+	footer{
+		background: var(--amarillo);
+		padding: 20px 0px;
+	}
+	img.logo_footer{
+		display: block;
+		width: 100%;
+	}
+	#enlace_legal a{
+	    font-size: 1.2em;
+	    font-weight: bold;
+	    white-space: nowrap;
+	}
+	ul#redes_sociales_footer{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 30px;
+	}
+	img.social_footer{
+		display: block;
+		width: 36px;
+	}
+	#copy{
+		display: block;
+		text-align: center;
+		white-space: nowrap;
+	}
+
+/* HOME */
+	#main_banner{
+		background-image: url('../img/main_banner_desktop.jpg');
+		background-size: cover;
+		height: 100vh;
+	}
+
+	#horarios_cartel_home{
+		margin: 60px 0px;
+	}
+	#horarios_home .h3{
+		color: var(--turquesa);
+	}
+	#horarios_home p{
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+	#horarios_home #button_horarios_home{
+		background: var(--turquesa);
+		font-size: 3em;
+		line-height: 0.5;
+    	padding-bottom: 0.7em;
+    	float: right;
+    	margin-top: 80px;
+	}
+	#horarios_home #button_horarios_home:hover,
+	#horarios_home #button_horarios_home:active,
+	#horarios_home #button_horarios_home:focus{
+		background: var(--turquesa-oscuro);
+	}
+	#cartel_home{
+		display: block;
+		width: 100%;
+	}
+
+	/* entradas */
+	#entradas{
+		background: url('../img/fondo_entradas.jpg');
+		background-size: cover;
+		padding: 80px 0px 160px 0px;
+	}
+	#entradas .h3{
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	.col_entrada{
+		margin-bottom: 30px;
+	}
+	.entrada{
+		padding: 30px;
+		background: rgba(255,255,255,0.8);
+		border-radius: 10px;
+		text-align: center;
+	}
+	.titulo_entrada{
+		font-size: 2em;
+		font-weight: bold;
+	}
+	.desc_entrada{
+		font-weight: bold;
+	}
+	.precio_entrada{
+		font-size: 3em;
+		font-weight: bold;
+		letter-spacing: 2px;
+	}
+	.detalle_entrada_holder{
+		text-align: center;
+	}
+	ul.detalle_entrada{
+		display: inline-block;
+		text-align: left;
+		padding: 30px;
+	}
+	ul.detalle_entrada li{
+		display: block;
+    	white-space: nowrap;
+		font-weight: bold;
+	}
+	ul.detalle_entrada li:before{
+		content: "";
+		width: 10px;
+		height: 10px;
+		display: inline-block;
+		margin-right: 5px;
+	}
+	.enlace_entrada{
+		padding: 0px 10px 10px 10px;
+		font-size: 2em;
+	}
+
+	#entrada_turquesa .titulo_entrada{
+		color: var(--turquesa);
+	}
+	#entrada_rosada .titulo_entrada{
+		color: var(--rosa);
+	}
+	#entrada_solaris .titulo_entrada{
+		color: var(--amarillo);
+	}
+
+	#entrada_turquesa .precio_entrada{
+		color: var(--turquesa);
+	}
+	#entrada_rosada .precio_entrada{
+		color: var(--rosa);
+	}
+	#entrada_solaris .precio_entrada{
+		color: var(--amarillo);
+	}
+
+	#entrada_turquesa .detalle_entrada li:before{
+		background: var(--turquesa);
+	}
+	#entrada_rosada .detalle_entrada li:before{
+		background: var(--rosa);
+	}
+	#entrada_solaris .detalle_entrada li:before{
+		background: var(--amarillo);
+	}
+
+	#entrada_turquesa .enlace_entrada{
+		background: var(--turquesa);
+	}
+	#entrada_turquesa .enlace_entrada:hover{
+		background: var(--turquesa-oscuro);
+	}
+	#entrada_rosada .enlace_entrada{
+		background: var(--rosa);
+	}
+	#entrada_rosada .enlace_entrada:hover{
+		background: var(--rosa-oscuro);
+	}
+	#entrada_solaris .enlace_entrada{
+		background: var(--amarillo);
+	}
+	#entrada_solaris .enlace_entrada:hover{
+		background: var(--amarillo-oscuro);
+	}
+	
+	/* te quedas */
+	#te_quedas{
+		padding: 80px 0px;
+	}
+	#te_quedas_titulo{
+		margin-bottom: 60px;
+		text-align: center;
+		font-weight: bold;
+	}
+	.te_quedas_titulo_dec:after{
+		content: "";
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		margin-left: 30px;
+		background-repeat: no-repeat;
+		background-size: contain;	
+	}
+	#te_quedas_camping:after{
+		background-image: url('../img/iconos/camping.png');
+	}
+	#te_quedas_parking:after{
+		background-image: url('../img/iconos/parking.png');
+	}
+	.te_quedas_desc{
+		font-weight: bold;
+	}
+	.te_quedas_link{
+		font-weight: bold;
+	}
+
+	/* quieres más */
+	#quieres_mas{
+		padding: 80px 0px;
+	}
+	#quieres_mas_titulo{
+		margin-bottom: 60px;
+		text-align: center;
+		font-weight: bold;
+		color: var(--turquesa);
+	}
+	.pastilla_quieres_mas{
+		display: block;
+		margin-bottom: 15px;
+		padding: 30px;
+		text-align: center;
+		font-size: 2em;
+		font-weight: bold;
+	}
+	#pastilla_artistas.pastilla_quieres_mas{
+		background: var(--blanco);
+		color: var(--negro);
+	}
+	#pastilla_artistas.pastilla_quieres_mas:hover,
+	#pastilla_artistas.pastilla_quieres_mas:active,
+	#pastilla_artistas.pastilla_quieres_mas:focus{
+		background: var(--gris);
+	}
+	#pastilla_elche.pastilla_quieres_mas{
+		background: var(--amarillo);
+		color: var(--negro);
+	}
+	#pastilla_elche.pastilla_quieres_mas:hover,
+	#pastilla_elche.pastilla_quieres_mas:active,
+	#pastilla_elche.pastilla_quieres_mas:focus{
+		background: var(--amarillo-oscuro);
+	}
+	#pastilla_colaboradores.pastilla_quieres_mas{
+		background: var(--rosa);
+		color: var(--negro);
+	}
+	#pastilla_colaboradores.pastilla_quieres_mas:hover,
+	#pastilla_colaboradores.pastilla_quieres_mas:active,
+	#pastilla_colaboradores.pastilla_quieres_mas:focus{
+		background: var(--rosa-oscuro);
+	}
+	#pastilla_merch.pastilla_quieres_mas{
+		background: var(--turquesa);
+	}
+	#pastilla_merch.pastilla_quieres_mas:hover,
+	#pastilla_merch.pastilla_quieres_mas:active,
+	#pastilla_merch.pastilla_quieres_mas:focus{
+		color: var(--negro);
+		background: var(--turquesa-oscuro);
+	}
+
+/* PERFIL */
+	#imagen_perfil_holder{
+		max-width: 200px;
+		overflow: hidden;
+		margin: auto;
+		border-radius: 50%;
+		border: 5px solid var(--amarillo);
+	}
+	#imagen_perfil{
+		display: block;
+		width: 100%;
+	}
+	#info_perfil{
+		line-height: 2;
+	}
+	.greyed_out{
+		color: var(--gris-oscuro);
+	}
+	#gustos{
+		margin-top: 50px;
+	}
+	.listado_gustos{
+		margin-bottom: 30px;
+		padding: 25px;
+		padding-bottom: 60px;
+		background: var(--gris-claro);
+	}
+	.titulo_gustos{
+		display: block;
+		margin-bottom: 30px;
+	}
+	ul.lista_gustos li{
+		display: block;
+		font-weight: bold;
+	}
+	ul.lista_gustos li:before{
+		content: "+";
+		display: inline-block;
+		margin-right: 5px;
+	}
+
+/* ARTISTAS */
+	/* filtros */
+	#filtros_artistas{
+		margin-bottom: 30px;
+		padding: 20px;
+		background-color: var(--gris-muy-claro);
+        box-shadow:  0px 12px 12px -10px #CCC,
+         0px -12px 12px -10px #CCC; 
+	}
+	#filtros_artistas_holder{
+		overflow: hidden;
+		max-height: 1000px;
+		transition: 1s;
+	}
+	#filtros_artistas_holder.closed{
+		max-height: 0px;
+	}
+	#holder_enlace_filtros{
+		text-align: right;
+		margin-bottom: 30px;
+	}
+	#enlace_filtros{
+		color: var(--turquesa);
+		font-weight: bold;
+	}
+	.titulo_filtro{
+		display: block;
+		padding: 5px 0px;
+		text-align: center;
+	}
+	.radio_filtro{
+		display: none;
+	}
+	ul.opciones_filtro{
+		padding: 0px 20px;
+	}
+	ul.opciones_filtro li.opcion_filtro{
+		display: block;
+		padding: 10px 0px;
+	}
+	.opcion_filtro label{
+		display: block;
+		cursor: pointer;
+		color: var(--gris-oscuro);
+	}
+	.opcion_filtro input.radio_filtro[type="radio"]:checked+label{
+		color: var(--rosa);
+		font-weight: bold;
+	}
+	#botones_filtro{
+		margin-top: 40px;
+	}
+	#botones_filtro button{
+		width: 100%;
+	}
+
+	/* artistas */
+	.artista{
+		margin-bottom: 30px;
+	}
+	.artista.oculto-1,
+	.artista.oculto-2,
+	.artista.oculto-3,
+	.artista.oculto-4{
+		display: none;
+	}
+	.enlace_artista{
+		position: relative;
+		display: block;
+	}
+	.imagen_artista{
+		display: block;
+		width: 100%;
+	}
+	.nombre_artista{
+		display: none;
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		color: var(--negro);
+		background: rgba(255, 255, 255, 0.8);
+		padding: 10px 0px 20px 0px;
+		text-align: center;
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+	.artista:hover .nombre_artista{
+		display: block;
+	}
+	/* enlaces */
+	#enlace_cartel_artistas_holder,
+	#enlace_horarios_artistas_holder{
+		margin-top: 80px;
+		text-align: center;
+	}
+	#enlace_cartel_artistas,
+	#enlace_horarios_artistas{
+		font-size: 1.5em;
+	}
+	#enlace_cartel_artistas .button,
+	#enlace_horarios_artistas .button{
+		background-color: var(--negro);
+		color: var(--amarillo);
+	}
+
+/* ARTISTA */
+	#artista{
+		background-image: url('../img/fondo_artista.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	#ficha_artista{
+		font-weight: bold;
+		margin-bottom: 80px;
+	}
+	#imagen_artista_holder{
+		width: 70%;
+		overflow: hidden;
+		margin: auto;
+		border-radius: 50%;
+	}
+	#imagen_artista{
+		display: block;
+		width: 100%;
+	}
+	#info_artista{
+		line-height: 2;
+	}
+	#info_artista b.h4, #info_artista b.h5, #info_artista b.h3{
+		line-height: 2;
+	}
+	#desc_artista{
+		margin-top: 20px;
+		border: 4px solid var(--negro);
+	}
+	#desc_artista p{
+		padding: 0px 10px;
+		font-weight: bold;
+		font-size: 1.2em;
+		line-height: 1.4;
+	}
+	#mas_info_artista{
+		display: inline-block;
+		margin-bottom: 20px;
+		padding: 5px 20px;
+		border-right: 5px solid var(--negro);
+		border-bottom: 5px solid var(--negro);
+		font-weight: bold;
+	}
+	.holder_artista_borde{
+		padding: 10px;
+		border: 2px solid var(--negro);
+		font-weight: bold;
+	}
+	#otros_trabajos_artista.icono_titulo_seccion_antes:before{
+		background-image: url('../img/iconos/mini-disco-negro.png');
+		width: 36px;
+		height: 36px;
+	}
+
+	#spotify_artista.icono_titulo_seccion_despues:after{
+		background-image: url('../img/iconos/mini-spotify.png');
+		width: 28px;
+		height: 28px;
+	}
+	#desc_ultimo_artista_holder{
+		font-size: 1.1em;
+	}
+
+	#ultimos_trabajos_artista, 
+	#otros_trabajos_artista, 
+	#spotify_artista{
+		margin-top: 80px;
+		margin-bottom: 20px;
+	}
+
+/* DIRECTO */
+	#reproductor{
+		position: relative;
+	}
+	#reproductor_holder{
+		padding: 2px;
+		border: 3px solid var(--negro);
+	}
+	#titulo_video{
+		white-space: nowrap;
+		font-size: 0.8em;
+		padding: 5px;
+	}
+	#punto_directo{
+		font-size: 0.5em;
+		vertical-align: middle;
+	}
+	#video_reproductor{
+		width: 100%;
+	}
+	#viewers_video{
+		white-space: nowrap;
+    	line-height: 2.4;
+    	padding: 5px;
+	}
+	#viewers_video:before{
+		content: "";
+		background-image: url('../img/iconos/mini-visibilidad.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 20px;
+		height: 20px;
+		display: inline-block;
+    	vertical-align: sub;
+    	margin-right: 5px;
+	}
+	#compartir_video{
+		white-space: nowrap;
+    	line-height: 2.4;
+    	text-align: right;
+    	padding: 5px;
+	}
+	#compartir_video:after{
+		content: "";
+		background-image: url('../img/iconos/mini-opcion.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 28px;
+		height: 28px;
+		display: inline-block;    	
+		vertical-align: middle;
+    	margin-left: 5px;
+	}
+	#compartir_video a{
+		padding: 3px 5px;
+		border-radius: 5px;
+		border: 1px solid var(--negro);
+    	vertical-align: middle;
+	}
+	#compartir_video a:before{
+		content: "";
+		background-image: url('../img/iconos/mini-compartir.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 20px;
+		height: 20px;
+		display: inline-block;
+    	vertical-align: sub;
+    	margin-right: 5px;
+	}
+
+	#enlace_horarios_directo_holder{
+		margin-top: 80px;
+		text-align: center;
+	}
+	#enlace_horarios_directo{
+		font-size: 1.5em;
+	}
+
+/* HORARIOS */
+	#horarios_holder{
+		margin-bottom: 80px;
+	}
+	#horario_desktop, 
+	#horario_responsive,
+	#cartel{
+		display: block;
+		width: 100%;
+	}
+
+/* MURO Y CHAT */
+	.holder_muro_chat{
+		border-radius: 10px;
+		padding: 20px;
+	}
+	/* tabs */
+		.tab{
+			display: inline-block;
+			font-weight: bold;
+		}
+	.contenido_chat, .controles_chat{
+		border-radius: 10px;
+		padding: 20px;
+		background-color: var(--blanco);
+	}
+	.contenido_chat{
+		margin-bottom: 20px;
+	}
+	.contenido_chat img{
+		display: block;
+		width: 100%;
+	}
+	.input_text_chat{
+		position: relative;
+	}
+	.input_text_chat input{
+		width: 100%;
+		border: 0px;
+		outline: none;
+	}
+	.iconos_funcionales_input_chat{
+		margin-bottom: 20px;
+	}
+	.iconos_funcionales_input_chat ul li{
+		margin-right: 15px;
+	}
+	.icono_chat{
+		cursor: pointer;
+		display: block;
+		width: 25px;
+	}
+	.icono_enviar_chat{
+		cursor: pointer;
+		display: block;
+		width: 45px;
+		position: absolute;
+    	top: 0;
+		right: -10px;
+		padding: 5px 10px;
+		border-radius: 5px;
+	}
+	/* muro */
+	#muro{
+		background-color: var(--gris-claro);
+	}
+	#enviar_muro{
+		background-color: var(--gris-claro);
+	}
+	/* chat */
+	#chat{
+		background-color: var(--turquesa);
+	}
+	#enviar_chat{
+		background-color: var(--turquesa);
+	}
+
+/* FAVORITOS */
+	#lista_artistas_favoritos{
+		margin-bottom: 80px;
+	}
+	#artistas_favoritos,
+	#spotify_favoritos{
+		margin-bottom: 20px;
+	}
+	#artistas_favoritos.icono_titulo_seccion_antes:before{
+		background-image: url('../img/iconos/mini-microfono.png');
+		width: 28px;
+		height: 28px;
+	}
+
+	#spotify_favoritos.icono_titulo_seccion_antes:before{
+		background-image: url('../img/iconos/mini-disco-negro.png');
+		width: 28px;
+		height: 28px;
+	}
+	#enlace_favoritos_holder{
+		margin-top: 80px;
+		text-align: center;
+	}
+	#enlace_favoritos{
+		font-size: 1.5em;
+	}
+
+/* LEGAL */
+	#legal .h3{
+		margin-bottom: 30px;
+	}
+	#legal .h4{
+		margin-top: 40px;
+		margin-bottom: 30px;
+	}
+	#legal #dominio_web{
+		display: block;
+	}
+	#legal .contenido_destacado{
+		padding-left: 30px;
+	}
+	#legal a{
+		font-weight: bold;
+	}

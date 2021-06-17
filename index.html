@@ -1,0 +1,240 @@
+<!doctype html>
+
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ALSH Festival</title>
+  <meta name="description" content="ALSH Festival">
+  <meta name="author" content="Sonia Fuster">
+
+  <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body class='fixed'>
+  <header>
+    <div class="container-xl">
+      <div class="row justify-content-between">  
+        <nav class="col-lg-5 d-none d-lg-block">
+          <ul class="menu-top unstyled_list">
+            <li><a href="artistas.html">ARTISTAS</a></li>
+            <li><a href="#entradas">ENTRADAS</a></li>
+            <li><a href="horarios.html">HORARIOS</a></li>
+            <li><a href="#te_quedas_titulo">CAMPING</a></li>
+          </ul>
+        </nav>
+        <div class="col-6 col-sm-2">
+          <a href="index.html"><img id="logo" src="img/logo.png" alt="ASH Festival Logo"></a>
+        </div>
+        <nav class="col-lg-5 d-none d-lg-block">
+          <ul class="menu-top unstyled_list">
+            <li><a href="#quieres_mas_titulo">NOSOTROS</a></li>
+            <li><a href="directo.html">DIRECTO</a></li>
+            <li><a href="chat.html">MURO Y CHAT</a></li>
+            <li><a href="#" id='enlace_perfil'>PERFIL</a></li>
+          </ul>
+        </nav>
+        <div class="col-6 col-sm-2 d-block d-lg-none">
+          <div id='menu_open_holder'>
+            <img id="menu_open" src="img/iconos/menu.png" alt="ASH Festival Logo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav id='menu_mobile' class='closed d-block d-lg-none'>
+      <div id='menu_close_holder'>
+        <img id="menu_close" src="img/iconos/menu_close.png" alt="ASH Festival Logo">
+      </div>
+      <ul class='unstyled_list'>
+        <li><a class="menu_mobile_link selected" href="index.html">HOME</a></li>
+        <li><a class="menu_mobile_link" href="horarios.html">CARTEL Y HORARIOS</a></li>
+        <li><a class="menu_mobile_link" href="#entradas">ENTRADAS</a></li>
+        <li><a class="menu_mobile_link" href="artistas.html">ARTISTAS</a></li>
+        <li><a class="menu_mobile_link" href="#" id='enlace_perfil_mobile'>PERFIL DE USUARIO</a></li>
+        <li><a class="menu_mobile_link" href="chat.html">MURO Y CHAT</a></li>
+        <li><a class="menu_mobile_link" href="directo.html">EN DIRECTO</a></li>
+        <li><a class="menu_mobile_link" href="#te_quedas_titulo">CAMPING / PARKING</a></li>
+        <li><a class="menu_mobile_link" href="#quieres_mas_titulo">SOBRE NOSOTROS</a></li>
+        <li><a class="menu_mobile_link" href="#quieres_mas_titulo">COLABORACIONES</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="main_banner"></div>
+
+    <div class="container-xl">
+      <div class="row justify-content-between" id="horarios_cartel_home">
+        <div class="col-lg-5 col-md-12" id="horarios_home">
+          <h3 class="h3 custom_font">Consulta cuando y dónde actuará tu artista favorito</h3>
+          <p>¿Quieres saber qué día actúa Bely Basarte? Quizá te interesa más saber a qué hora podrás ver por fin a Billie Eilish...</p>
+          <p>¿Kase O es tu ídolo? Descubre si el sol aún estará en el cielo cuando sus rimas suenen a través de los altavoces...</p>
+          <a class="button custom_font_alt" id="button_horarios_home" href="horarios.html">horarios</a>
+        </div>
+        <div class="col-lg-5 col-md-12">
+          <img id="cartel_home" src="img/cartell.jpg" alt="Cartel ASH Festival">
+        </div>
+      </div>
+    </div>
+
+    <div id='entradas'>
+      <div class="container-xxl">
+        <div class="row justify-content-evenly">  
+          <div class="col-12"><h3 class="h3">ENTRADAS</h3></div>
+        </div>
+        <div class="row justify-content-evenly">  
+          <div class="col-xl-3 col-lg-4 col-md-10 order-lg-1 order-sm-3 order-1 col_entrada">
+            <div class='entrada' id="entrada_turquesa">
+              <h4 class='titulo_entrada custom_font_alt'>turquesa</h4>
+              <p class='desc_entrada'>Los 4 días para una experiencia completa</p>
+              <span class='precio_entrada custom_font'>180€</span>
+              <div class="detalle_entrada_holder">
+                <ul class='detalle_entrada unstyled_list'>
+                  <li>PACK BIENVENIDA</li>
+                  <li>ACCESO CAMPING</li>
+                  <li>1 VALE COMIDA/DÍA</li>
+                </ul>
+              </div>
+              <a class="enlace_entrada button" id="button_horarios_home" href="#">COMPRA</a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-5 order-lg-2 order-sm-2 order-2 col_entrada">
+            <div class='entrada' id="entrada_rosada">
+              <h4 class='titulo_entrada custom_font_alt'>rosada</h4>
+              <p class='desc_entrada'>Individual: ¿solo tienes un día libre? ¡Vente!</p>
+              <span class='precio_entrada custom_font'>60€-80€</span>
+              <div class="detalle_entrada_holder">
+                <ul class='detalle_entrada unstyled_list'>
+                  <li>MINI-PACK BIENVENIDA</li>
+                  <li>ACCESO PARKING 24H</li>
+                  <li>3 CONSUMICIONES</li>
+                </ul>
+              </div>
+              <a class="enlace_entrada button" id="button_horarios_home" href="#">COMPRA</a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-5 order-lg-3 order-sm-1 order-3 col_entrada">
+            <div class='entrada' id="entrada_solaris">
+              <h4 class='titulo_entrada custom_font_alt'>solaris</h4>
+              <p class='desc_entrada'>Concierto único: ¡dos horitas y a casa!</p>
+              <span class='precio_entrada'>20€-40€</span>
+              <div class="detalle_entrada_holder">
+                <ul class='detalle_entrada unstyled_list'>
+                  <li>BOLSA ALSH FESTIVAL</li>
+                  <li>ACCESO PARKING 12H</li>
+                  <li>1 CONSUMICIÓN</li>
+                </ul>
+              </div>
+              <a class="enlace_entrada button" id="button_horarios_home" href="#">COMPRA</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id='te_quedas'>
+      <div class="container-xl">
+        <div class="row justify-content-evenly">  
+          <div class="col-12"><h3 class="h3 custom_font_alt" id="te_quedas_titulo">¿te quedas?</h3></div>
+        </div>
+        <div class="row justify-content-evenly">  
+          <div class="col-lg-4 col-md-10">
+            <h3 class="h4 te_quedas_titulo_dec custom_font_alt" id="te_quedas_camping">camping</h3>
+            <p class='te_quedas_desc'>Coge fuerzas para disfrutar de los mejores conciertos y descansa tras ellos rodeado de narutaleza y amigos.</p>
+            <div class="text-end"><a class='te_quedas_link' href="#">Leer más...</a></div>
+          </div>
+          <div class="col-lg-4 col-md-10">
+            <h3 class="h4 te_quedas_titulo_dec custom_font_alt" id="te_quedas_parking">parking</h3>
+            <p class="te_quedas_desc">Te proporcionamos un sitio seguro donde dejar estacionado tu vehículo mienrtras saltas y cantas a tan solo un km de distancia.</p>
+            <div class="text-end"><a class='te_quedas_link' href="#">Leer más...</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id='mapa_home'>
+      <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=IFA%20Torrellano+(ALSH%20Festival)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+    </div>
+
+    <div id='quieres_mas'>
+      <div class="container-xl">
+        <div class="row justify-content-center">  
+          <div class="col-12"><h3 class="h3 custom_font_alt" id="quieres_mas_titulo">¿quieres más?</h3></div>
+        </div>
+        <div class="row justify-content-center">  
+          <div class="col-xl-4 col-sm-6">
+            <a href="artistas.html" class='pastilla_quieres_mas' id="pastilla_artistas">ARTISTAS</a>
+          </div>
+          <div class="col-xl-4 col-sm-6">
+            <a href="https://www.visitelche.com" class='pastilla_quieres_mas' id="pastilla_elche">VISITA ELCHE</a>
+          </div>
+        </div>
+        <div class="row justify-content-center">  
+          <div class="col-xl-4 col-sm-6">
+            <a href="#" class='pastilla_quieres_mas' id="pastilla_colaboradores">COLABORADORES</a>
+          </div>
+          <div class="col-xl-4 col-sm-6">
+            <a href="#" class='pastilla_quieres_mas' id="pastilla_merch">MERCHANDISING</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div id="logos_footer">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">  
+          <div class="col-lg-2 col-6 order-lg-1 order-2 footer_content_col" id="enlace_legal"><a href="legal.html">Aviso Legal y <br>Política de Privacidad</a></div>
+          <div class="col-lg-2 col-6 order-lg-2 order-3 footer_content_col"><img class="logo_footer" src="img/ayto-elche.png"></div>
+          <div class="col-lg-2 col-12 order-lg-3 order-1 footer_content_col">
+            <ul id="redes_sociales_footer" class="unstyled_list">
+              <li><a href="#"><img class="social_footer" src="img/iconos/mini-twitter.png"></a></li>
+              <li><a href="#"><img class="social_footer" src="img/iconos/mini-instagram.png"></a></li>
+              <li><a href="#"><img class="social_footer" src="img/iconos/mini-youtube.png"></a></li>
+            </ul>
+            <b id="copy">ALSH FESTIVAL © 2021</b>
+          </div>
+          <div class="col-lg-2 col-6 order-lg-4 order-4 footer_content_col"><img class="logo_footer" src="img/fan-music-fest.png"></div>
+          <div class="col-lg-2 col-6 order-lg-5 order-5 footer_content_col"><img class="logo_footer" src="img/logo-FERIA.png"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id='splash_screen'>
+    <img id="logo_splash" src="img/logo.gif" alt="ASH Festival Logo">
+  </div>
+  <div id='login_modal'>
+    <div id='login_modal_popup'>
+      <b id='titulo_login' class='tag_rosa'>IDENTIFÍCATE</b><br>
+      <div class='form_input'>
+        <label>NOMBRE DE USUARIO</label>
+        <input class='input' type="text" name="nombre">
+      </div>
+      <div class='form_input'>
+        <label>CONTRASEÑA</label>
+        <input class='input' type="password" name="contrasena">
+      </div>
+      <a class='button btn-small' id="enlace_login" href="perfil.html">INICIAR SESIÓN</a><br>
+      <b>¿Aun no tienes perfil? Créalo pinchando <a href="#" class='tag_amarillo'>AQUÍ</a>.</b>
+    </div>
+  </div>
+  <div id='cookies_modal'>
+    <div id='cookies_modal_holder' class="container">
+      <div id='cookies_modal_popup'>
+        <p id='cookies_desc'>Utilizamos cookies propias y de terceros para fines analíticos y para mostrarte publicidad personalizada en base a un perfíl elaborado de tus hábitos de navegación (por ejemplo, páginas visitadas). Clica <a href="legal.html" class='tag_rosa'>AQUÍ</a> para más información. Puedes aceptar todas las cookies pulsando el botón "Aceptar" o configurarlas o rechazar su uso clicando <a href="legal.html" class='tag_amarillo'>AQUÍ</a>.</p>
+        <a class='button btn-small' id="enlace_cookies" href="#">Aceptar</a><br>
+      </div>
+    </div>
+  </div>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

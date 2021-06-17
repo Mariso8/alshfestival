@@ -1,0 +1,447 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ALSH Festival - Artistas</title>
+  <meta name="description" content="ALSH Festival - Artistas">
+  <meta name="author" content="Sonia Fuster">
+
+  <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body class='fixed'>
+  <header>
+    <div class="container-lg">
+      <div class="row justify-content-between">  
+        <nav class="col-lg-5 d-none d-lg-block">
+          <ul class="menu-top unstyled_list">
+            <li><a href="artistas.html">ARTISTAS</a></li>
+            <li><a href="index.html#entradas">ENTRADAS</a></li>
+            <li><a href="horarios.html">HORARIOS</a></li>
+            <li><a href="index.html#te_quedas_titulo">CAMPING</a></li>
+          </ul>
+        </nav>
+        <div class="col-6 col-sm-2">
+          <a href="index.html"><img id="logo" src="img/logo.png" alt="ASH Festival Logo"></a>
+        </div>
+        <nav class="col-lg-5 d-none d-lg-block">
+          <ul class="menu-top unstyled_list">
+            <li><a href="index.html#quieres_mas_titulo">NOSOTROS</a></li>
+            <li><a href="directo.html">DIRECTO</a></li>
+            <li><a href="chat.html">MURO Y CHAT</a></li>
+            <li><a href="#" id='enlace_perfil'>PERFIL</a></li>
+          </ul>
+        </nav>
+        <div class="col-6 col-sm-2 d-block d-lg-none">
+          <div id='menu_open_holder'>
+            <img id="menu_open" src="img/iconos/menu.png" alt="ASH Festival Logo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav id='menu_mobile' class='closed d-block d-lg-none'>
+      <div id='menu_close_holder'>
+        <img id="menu_close" src="img/iconos/menu_close.png" alt="ASH Festival Logo">
+      </div>
+      <ul class='unstyled_list'>
+        <li><a class="menu_mobile_link" href="index.html">HOME</a></li>
+        <li><a class="menu_mobile_link" href="horarios.html">CARTEL Y HORARIOS</a></li>
+        <li><a class="menu_mobile_link" href="index.html#entradas">ENTRADAS</a></li>
+        <li><a class="menu_mobile_link selected" href="artistas.html">ARTISTAS</a></li>
+        <li><a class="menu_mobile_link" href="#" id='enlace_perfil_mobile'>PERFIL DE USUARIO</a></li>
+        <li><a class="menu_mobile_link" href="chat.html">MURO Y CHAT</a></li>
+        <li><a class="menu_mobile_link" href="directo.html">EN DIRECTO</a></li>
+        <li><a class="menu_mobile_link" href="index.html#te_quedas_titulo">CAMPING / PARKING</a></li>
+        <li><a class="menu_mobile_link" href="index.html#quieres_mas_titulo">SOBRE NOSOTROS</a></li>
+        <li><a class="menu_mobile_link" href="index.html#quieres_mas_titulo">COLABORACIONES</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id='artistas'>
+    <div class="container-lg">
+      <div class="row justify-content-evenly">  
+        <div class="col-12 titulo_seccion"><h3 class="h3">ARTISTAS</h3></div>
+      </div>
+      <div class="row justify-content-end">  
+          <div class="col-md-3 col-12" id='holder_enlace_filtros'><a href="#" id='enlace_filtros'>FILTROS</a></div>
+      </div>
+      <div id='filtros_artistas_holder' class='closed'>
+        <div id='filtros_artistas'>
+          <div class="row justify-content-start">  
+            <div class="col-md-3 col-sm-6 col-12 filtro">
+              <b class="titulo_filtro">NACIONALIDAD</b><br>
+              <ul class='opciones_filtro unstyled_list'>
+                <li class='opcion_filtro'><input type='radio' name='nacionalidad' class='radio_filtro nacionalidad' value='local' id='filtro_local'><label for='filtro_local'>LOCAL</label></li>
+                <li class='opcion_filtro'><input type='radio' name='nacionalidad' class='radio_filtro nacionalidad' value='internacional' id='filtro_internacional'><label for='filtro_internacional'>INTERNACIONAL</label></li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 filtro">
+              <b class="titulo_filtro">GÉNERO MUSICAL</b><br>
+              <ul class='opciones_filtro unstyled_list'>
+                <li class='opcion_filtro'><input type='radio' name='genero' class='radio_filtro genero' value='indie-pop' id='filtro_indie-pop'><label for='filtro_indie-pop'>INDIE-POP</label></li>
+                <li class='opcion_filtro'><input type='radio' name='genero' class='radio_filtro genero' value='indie-rock' id='filtro_indie-rock'><label for='filtro_indie-rock'>INDIE-ROCK</label></li>
+                <li class='opcion_filtro'><input type='radio' name='genero' class='radio_filtro genero' value='pop' id='filtro_pop'><label for='filtro_pop'>POP</label></li>
+                <li class='opcion_filtro'><input type='radio' name='genero' class='radio_filtro genero' value='grunge' id='filtro_grunge'><label for='filtro_grunge'>GRUNGE</label></li>
+                <li class='opcion_filtro'><input type='radio' name='genero' class='radio_filtro genero' value='trap' id='filtro_trap'><label for='filtro_trap'>TRAP</label></li>
+                <li class='opcion_filtro'><input type='radio' name='genero' class='radio_filtro genero' value='edm' id='filtro_edm'><label for='filtro_edm'>EDM</label></li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 filtro">
+              <b class="titulo_filtro">UN DÍA CONCRETO</b><br>
+              <ul class='opciones_filtro unstyled_list'>
+                <li class='opcion_filtro'><input type='radio' name='dia' class='radio_filtro dia' value='1' id='filtro_1'><label for='filtro_1'>PRIMER DÍA (5 AGOSTO 21)</label></li>
+                <li class='opcion_filtro'><input type='radio' name='dia' class='radio_filtro dia' value='2' id='filtro_2'><label for='filtro_2'>SEGUNDO DÍA (6 AGOSTO 21)</label></li>
+                <li class='opcion_filtro'><input type='radio' name='dia' class='radio_filtro dia' value='3' id='filtro_3'><label for='filtro_3'>TERCER DÍA (7 AGOSTO 21)</label></li>
+                <li class='opcion_filtro'><input type='radio' name='dia' class='radio_filtro dia' value='4' id='filtro_4'><label for='filtro_4'>CUARTO DÍA (8 AGOSTO 21)</label></li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 filtro">
+              <b class="titulo_filtro">ESCENARIOS</b><br>
+              <ul class='opciones_filtro unstyled_list'>
+                <li class='opcion_filtro'><input type='radio' name='escenario' class='radio_filtro escenario' value='solo' id='filtro_solos'><label for='filtro_solos'>ALONE IN THE LIGHT (SOLOS)</label></li>
+                <li class='opcion_filtro'><input type='radio' name='escenario' class='radio_filtro escenario' value='grupos' id='filtro_grupos'><label for='filtro_grupos'>BETTER TOGETHER (GRUPOS)</label></li>
+                <li class='opcion_filtro'><input type='radio' name='escenario' class='radio_filtro escenario' value='dj' id='filtro_dj'><label for='filtro_dj'>ALL NIGHT LONG (DJ-EDM)</label></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row justify-content-center" id="botones_filtro">
+            <div class='col-md-3 col-sm-6 col-12'><button class='button btn-small' id='aplicar_filtro'>APLICAR FILTROS</button></div>
+            <div class='col-md-3 col-sm-6 col-12'><button class='button button-secondary btn-small' id='limpiar_filtro'>BORRAR TODOS LOS FILTROS</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='lista_artistas'>
+      <div class="container-lg">
+        <div class="row justify-content-start">  
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='indie-pop' data-dia='1' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/1.jpg" alt="AMAIA" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">amaia</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='edm' data-dia='4' data-escenario='dj'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/2.jpg" alt="AFROJACK" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">afrojack</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='edm' data-dia='1' data-escenario='dj'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/3.jpg" alt="ALESSO" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">alesso</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='indie-pop' data-dia='2' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/4.jpg" alt="ALICE WONDER" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">alice wonder</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='indie-pop' data-dia='4' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/5.jpg" alt="ANDRÉS SUAREZ" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">andrés suarez</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='edm' data-dia='4' data-escenario='dj'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/10.jpg" alt="ARMIN VAN BUUREN" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">armin van buuren</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='indie-pop' data-dia='3' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/9.jpg" alt="AURORA" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">aurora</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='edm' data-dia='3' data-escenario='dj'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/8.jpg" alt="AXWELL INGROSSO" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">axwell + ingrosso</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='indie-pop' data-dia='3' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/7.jpg" alt="BELY BASARTE" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">bely basarte</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='pop' data-dia='3' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/6.jpg" alt="BILLIE EILISH" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">billie eilish</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='edm' data-dia='2' data-escenario='dj'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/11.jpg" alt="CALVIN HARRIS" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">calvin harris</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='indie-rock' data-dia='2' data-escenario='grupos'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/12.jpg" alt="Love Of Lesbian" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">love of lesbian</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='indie-rock' data-dia='3' data-escenario='grupos'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/13.jpg" alt="ciudad jara" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">ciudad jara</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='trap' data-dia='2' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/14.jpg" alt="tangana" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">c. tangana</div>
+              </a>
+            </div>  
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='indie-pop' data-dia='2' data-escenario='dj'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/15.jpg" alt="dadi freyr" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">dadi freyr</div>
+              </a>
+            </div>  
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='edm' data-dia='1' data-escenario='dj'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/16.jpg" alt="delaporte" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">delaporte</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='indie-pop' data-dia='2' data-escenario='dj'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/17.jpg" alt="fedez" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">fedez</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='indie-pop' data-dia='3' data-escenario='grupos'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/18.jpg" alt="florence the machine" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">florence + the machine</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='indie-pop' data-dia='1' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/19.jpg" alt="galantis" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">galantis</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='grunge' data-dia='4' data-escenario='grupos'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/20.jpg" alt="gorillaz" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">gorillaz</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='pop' data-dia='2' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/21.jpg" alt="halsey" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">halsey</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='indie-rock' data-dia='4' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/22.jpg" alt="ivan ferreiro" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">ivan ferreiro</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='indie-rock' data-dia='1' data-escenario='grupos'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/23.jpg" alt="izal" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">izal</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='trap' data-dia='2' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/24.jpg" alt="kase o." class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">kase o.</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='indie-pop' data-dia='1' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/25.jpg" alt="el kanka" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">el kanka</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='indie-pop' data-dia='4' data-escenario='dj'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/26.jpg" alt="la casa azul" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">la casa azul</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='indie-pop' data-dia='4' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/27.jpg" alt="lana del rey" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">lana del rey</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='indie-rock' data-dia='2' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/28.jpg" alt="leiva" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">leiva</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='indie-pop' data-dia='4' data-escenario='grupos'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/29.jpg" alt="l. e. j. lej" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">l. e. j.</div>
+              </a>
+            </div>  
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='edm' data-dia='1' data-escenario='dj'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/30.jpg" alt="léa occhi" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">léa occhi</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='indie-pop' data-dia='1' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/31.jpg" alt="LORDE" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">lorde</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='trap' data-dia='1' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/32.jpg" alt="macaco" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">macaco</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='trap' data-dia='3' data-escenario='dj'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/33.jpg" alt="lola indigo" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">lola indigo</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='indie-rock' data-dia='4' data-escenario='grupos'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/34.jpg" alt="manel" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">manel</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='trap' data-dia='1' data-escenario='dj'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/35.jpg" alt="mahmood" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">mahmood</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='internacional' data-genero='edm' data-dia='3' data-escenario='dj'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/36.jpg" alt="martin garrix" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">martin garrix</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='edm' data-dia='3' data-escenario='dj'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/37.jpg" alt="natos y waor" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">natos y waor</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='indie-pop' data-dia='4' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/38.jpg" alt="nil moliner" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">nil moliner</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='trap' data-dia='3' data-escenario='dj'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/39.jpg" alt="rauw alejandro" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">rauw alejandro</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='trap' data-dia='3' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/40.jpg" alt="rayden" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">rayden</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='indie-pop' data-dia='2' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/41.jpg" alt="rozalén" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">rozalén</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='indie-pop' data-dia='1' data-escenario='grupos'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/42.jpg" alt="the chainsmokers" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">the chainsmokers</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='pop' data-dia='2' data-escenario='dj'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/43.jpg" alt="studio killers" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">studio killers</div>
+              </a>
+            </div>
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='grunge' data-dia='1' data-escenario='grupos'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/44.jpg" alt="pale waves" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">pale waves</div>
+              </a>
+            </div>  
+            <div class="col-md-4 col-6 artista" data-nacionalidad='local' data-genero='indie-pop' data-dia='2' data-escenario='solo'>
+              <a href="artista.html" class="enlace_artista">
+                <img src="img/artistas/451.jpg" alt="zahara" class="imagen_artista">
+                <div class="nombre_artista custom_font_alt">zahara</div>
+              </a>
+            </div>  
+        </div>
+      </div>
+    </div>
+    <div class="container-lg">
+      <div class="row justify-content-evenly" id="info_video">
+        <div class="col-md-6 col-12" id="enlace_cartel_artistas_holder"><b id="enlace_cartel_artistas" class="custom_font_alt">consulta el cartel <a href='horarios.html' class='button btn-mini'>aquí</a></b></div>
+        <div class="col-md-6 col-12" id="enlace_horarios_artistas_holder"><b id="enlace_horarios_artistas" class="custom_font_alt">consulta los horarios <a href='horarios.html' class='button btn-mini'>aquí</a></b></div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div id="logos_footer">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">  
+          <div class="col-lg-2 col-6 order-lg-1 order-2 footer_content_col" id="enlace_legal"><a href="legal.html">Aviso Legal y <br>Política de Privacidad</a></div>
+          <div class="col-lg-2 col-6 order-lg-2 order-3 footer_content_col"><img class="logo_footer" src="img/ayto-elche.png"></div>
+          <div class="col-lg-2 col-12 order-lg-3 order-1 footer_content_col">
+            <ul id="redes_sociales_footer" class="unstyled_list">
+              <li><a href="#"><img class="social_footer" src="img/iconos/mini-twitter.png"></a></li>
+              <li><a href="#"><img class="social_footer" src="img/iconos/mini-instagram.png"></a></li>
+              <li><a href="#"><img class="social_footer" src="img/iconos/mini-youtube.png"></a></li>
+            </ul>
+            <b id="copy">ALSH FESTIVAL © 2021</b>
+          </div>
+          <div class="col-lg-2 col-6 order-lg-4 order-4 footer_content_col"><img class="logo_footer" src="img/fan-music-fest.png"></div>
+          <div class="col-lg-2 col-6 order-lg-5 order-5 footer_content_col"><img class="logo_footer" src="img/logo-FERIA.png"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id='splash_screen'>
+    <img id="logo_splash" src="img/logo.gif" alt="ASH Festival Logo">
+  </div>
+  <div id='login_modal'>
+    <div id='login_modal_popup'>
+      <b id='titulo_login' class='tag_rosa'>IDENTIFÍCATE</b><br>
+      <div class='form_input'>
+        <label>NOMBRE DE USUARIO</label>
+        <input class='input' type="text" name="nombre">
+      </div>
+      <div class='form_input'>
+        <label>CONTRASEÑA</label>
+        <input class='input' type="password" name="contrasena">
+      </div>
+      <a class='button btn-small' id="enlace_login" href="perfil.html">INICIAR SESIÓN</a><br>
+      <b>¿Aun no tienes perfil? Créalo pinchando <a href="#" class='tag_amarillo'>AQUÍ</a>.</b>
+    </div>
+  </div>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
