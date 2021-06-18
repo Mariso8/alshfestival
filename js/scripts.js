@@ -165,6 +165,12 @@ function aplicar_filtros(){
 			}
 		}
 
+	toggle_filtros();
+
+	// Scroll arriba
+	document.body.scrollTop = 0; // Para Safari
+  	document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+
 }
 function limpiar_filtros(){
 	// Todos los filtros

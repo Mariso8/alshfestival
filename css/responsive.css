@@ -1,9 +1,17 @@
 /* HASTA SM */
 @media (max-width: 575px) {
 	/* GLOBAL */
+		body{
+			font-size: 12px;
+			line-height: 1.5;
+		}
 		main{
 			padding-top: 70px;
 		}
+		/* login modal */
+			#login_modal_popup{
+				top: 70px;
+			}
 	/* HEADER */
 		header{
 			padding: 10px 0px;
@@ -32,6 +40,10 @@
 			#aplicar_filtro{
 				margin-bottom: 20px;
 			}
+			.nombre_artista{
+				font-size: 0.8em;
+				padding: 5px 0px 10px 0px;
+			}
 	/* ARTISTA */
 		#desc_ultimo_artista_holder.holder_artista_borde{
 			border: 0px;
@@ -40,6 +52,16 @@
 
 /* HASTA MD */
 @media (max-width: 767px) {
+	/* COMMON */
+		/* login modal */
+			#login_modal_popup{
+				padding: 30px 10px;
+			}
+		/* cookies modal */
+			#cookies_modal_popup{
+				padding: 30px 10px;
+			}
+
 	/* HOME */
 		#horarios_home #button_horarios_home{
 			background: var(--turquesa);
